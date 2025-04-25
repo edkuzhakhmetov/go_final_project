@@ -2,9 +2,15 @@ module github.com/edkuzhakhmetov/go_final_project
 
 go 1.24.2
 
+replace go1f => ./
+
 require (
+	github.com/go-chi/chi v1.5.5
 	github.com/jmoiron/sqlx v1.4.0
+	github.com/joho/godotenv v1.5.1
+	github.com/sirupsen/logrus v1.9.3
 	github.com/stretchr/testify v1.10.0
+	go1f v0.0.0
 	modernc.org/sqlite v1.37.0
 )
 
