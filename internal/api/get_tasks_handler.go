@@ -7,8 +7,8 @@ import (
 	"github.com/edkuzhakhmetov/go_final_project/internal/models"
 )
 
-func (h *Handler) getTasksHandler(w http.ResponseWriter, r *http.Request) {
-	h.log.Info("Starting getTasksHandler action")
+func (h *Handler) apiGetTasks(w http.ResponseWriter, r *http.Request) {
+	h.log.Info("Starting api_GetTasks")
 
 	ctx := r.Context()
 	limit := 50

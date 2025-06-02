@@ -8,8 +8,8 @@ import (
 	"github.com/edkuzhakhmetov/go_final_project/internal/scheduler"
 )
 
-func (h *Handler) getTaskHandler(w http.ResponseWriter, r *http.Request) {
-	h.log.Info("Starting getTaskHandler action")
+func (h *Handler) apiGetTask(w http.ResponseWriter, r *http.Request) {
+	h.log.Info("Starting api_GetTask")
 
 	ctx := r.Context()
 	query := r.URL.Query()

@@ -9,8 +9,8 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func (h *Handler) PostTaskHandler(w http.ResponseWriter, r *http.Request) {
-	h.log.Info("Starting PostTaskHandler action")
+func (h *Handler) apiPostTask(w http.ResponseWriter, r *http.Request) {
+	h.log.Info("Starting api_PostTask")
 
 	ctx := r.Context()
 

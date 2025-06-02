@@ -10,13 +10,11 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-// Handler содержит зависимости для обработчиков HTTP-запросов
 type Handler struct {
 	log     logrus.FieldLogger
 	storage *storage.Storage
 }
 
-// NewHandler создает новый экземпляр Handler с необходимыми зависимостями
 func NewHandler(logger logrus.FieldLogger, storage *storage.Storage) *Handler {
 	return &Handler{
 		log:     logger,

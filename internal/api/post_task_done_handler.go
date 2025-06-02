@@ -10,8 +10,8 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func (h *Handler) postTaskDoneHandler(w http.ResponseWriter, r *http.Request) {
-	h.log.Info("Starting postTaskDoneHandler action")
+func (h *Handler) apiPostTaskDone(w http.ResponseWriter, r *http.Request) {
+	h.log.Info("Starting api_PostTaskDone")
 
 	ctx := r.Context()
 	query := r.URL.Query()

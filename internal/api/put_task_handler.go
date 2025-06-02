@@ -10,8 +10,8 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-func (h *Handler) putTaskHandler(w http.ResponseWriter, r *http.Request) {
-	h.log.Info("Starting putTaskHandler action")
+func (h *Handler) apiPutTask(w http.ResponseWriter, r *http.Request) {
+	h.log.Info("Starting api_PutTask action")
 
 	ctx := r.Context()
 

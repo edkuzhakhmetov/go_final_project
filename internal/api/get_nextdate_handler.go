@@ -8,8 +8,8 @@ import (
 	"github.com/edkuzhakhmetov/go_final_project/internal/scheduler"
 )
 
-func (h *Handler) NextDayHandler(w http.ResponseWriter, r *http.Request) {
-	h.log.Info("Starting NextDayHandler action")
+func (h *Handler) apiDelNextDay(w http.ResponseWriter, r *http.Request) {
+	h.log.Info("Starting api_NextDay")
 
 	query := r.URL.Query()
 	nowStr := query.Get("now")

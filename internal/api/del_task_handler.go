@@ -8,8 +8,8 @@ import (
 	"github.com/edkuzhakhmetov/go_final_project/internal/scheduler"
 )
 
-func (h *Handler) delTaskHandler(w http.ResponseWriter, r *http.Request) {
-	h.log.Info("Starting delTaskHandler action")
+func (h *Handler) apiDelTask(w http.ResponseWriter, r *http.Request) {
+	h.log.Info("Starting api_DelTask")
 
 	ctx := r.Context()
 	query := r.URL.Query()

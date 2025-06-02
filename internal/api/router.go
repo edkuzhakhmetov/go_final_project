@@ -22,13 +22,13 @@ func NewRouter(handler *Handler) *Router {
 
 	fs := http.FileServer(http.Dir(webDir))
 	r.Handle("/*", http.StripPrefix("/", fs))
-	r.Get("/api/nextdate", handler.NextDayHandler)
-	r.Post("/api/task", handler.PostTaskHandler)
-	r.Get("/api/tasks", handler.getTasksHandler)
-	r.Get("/api/task", handler.getTaskHandler)
-	r.Put("/api/task", handler.putTaskHandler)
-	r.Delete("/api/task", handler.delTaskHandler)
-	r.Post("/api/task/done", handler.postTaskDoneHandler)
+	r.Get("/api/nextdate", handler.apiDelNextDay)
+	r.Post("/api/task", handler.apiPostTask)
+	r.Get("/api/tasks", handler.apiGetTasks)
+	r.Get("/api/task", handler.apiGetTask)
+	r.Put("/api/task", handler.apiPutTask)
+	r.Delete("/api/task", handler.apiDelTask)
+	r.Post("/api/task/done", handler.apiPostTaskDone)
 
 	return &Router{
 		Mux:     r,
